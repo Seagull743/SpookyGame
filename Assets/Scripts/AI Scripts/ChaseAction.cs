@@ -8,14 +8,14 @@ public class ChaseAction : Action
 {
     public override void Act(StateController controller)
     {
-        
+        Chase(controller);
     }
 
 
     private void Chase(StateController controller)
     {
         controller.NavMeshAgent.destination = controller.playerTarget.position;
-        controller.NavMeshAgent.Resume();
+        controller.NavMeshAgent.isStopped = false;
     }
 
 }

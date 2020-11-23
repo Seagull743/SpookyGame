@@ -14,11 +14,11 @@ public class LockDoorOnTrigger : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.CompareTag ("Player"))
         {
-            Debug.Log("Locked the door");
             LD.LockDoor();
-            gameObject.GetComponentInChildren<Animator>().SetBool("Opened", true);
+            Door.GetComponent<Animator>().SetBool("Opened", false);
+            Destroy(gameObject);
         }
     }
        

@@ -17,7 +17,7 @@ public class StateController : MonoBehaviour
     [HideInInspector] public NavMeshAgent NavMeshAgent;
     [HideInInspector] public List<Transform> waypoints;
     [HideInInspector] public int nextWayPoint;
-    [HideInInspector] public Transform playerTarget;
+    /*[HideInInspector]*/ public Transform playerTarget;
     private bool aiActive;
 
     private void Awake()

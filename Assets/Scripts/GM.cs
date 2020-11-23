@@ -9,7 +9,7 @@ public class GM : MonoBehaviour
     [SerializeField] private GameObject interactcross;
     [SerializeField] private GameObject normalcross;
     public GameObject player;
-    public Note note;
+   
 
     private void Awake()
     {

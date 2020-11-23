@@ -6,16 +6,19 @@ public class TurnLight : InteractiveObject
 {
 
     public GameObject light;
-
+    public GameObject lightStand;
     public float maxlight = 20;
     public float Lightduration;
     public float Lightdrain = 1;
     private bool lighton = false;
     public AudioSource lightsound;
+    public AudioSource BrokenBulbSound;
+    
 
      void Start()
     {
-        Lightduration = maxlight;   
+        Lightduration = maxlight;
+        
     }
 
     public override void PlayerInteraction() 
@@ -39,6 +42,33 @@ public class TurnLight : InteractiveObject
     }
 
 
+    IEnumerator FlashingLights()
+    {
+
+        if (lighton == true)
+        {
+            light.SetActive(false);
+            yield return new WaitForSeconds(1);
+            light.SetActive(true);
+            yield return new WaitForSeconds(1);
+            light.SetActive(false);
+            yield return new WaitForSeconds(1);
+            light.SetActive(true);
+            yield return new WaitForSeconds(1);
+            light.SetActive(false);
+        }   
+    }
+
+    
+
+    public void BrokenBulbEvent()
+    {
+        lighton = false;
+        light.SetActive(false);
+        lightStand.SetActive(false);
+        BrokenBulbSound.Play();
+    }
+    
 
     public void LightSwitchToggle()
     {
@@ -50,6 +80,7 @@ public class TurnLight : InteractiveObject
         {
             LightOn(); 
         }
+        
     }
 
     

@@ -36,6 +36,9 @@ public class Door : InteractiveObject
 
    
 
+    
+
+
     private void DoorOpen()
     {
         opened = !opened;
@@ -48,8 +51,7 @@ public class Door : InteractiveObject
         }
         else if (opened == false)
         {
-            doorclosesound.Play();
-            
+            doorclosesound.Play();     
         }
     }
 }

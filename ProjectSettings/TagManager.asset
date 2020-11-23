@@ -10,6 +10,8 @@ TagManager:
   - Light
   - Battery
   - Draw
+  - Tiles
+  - Wood
   layers:
   - Default
   - TransparentFX
@@ -19,7 +21,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Player
   - 
   - 
   - 

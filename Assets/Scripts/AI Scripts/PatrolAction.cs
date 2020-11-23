@@ -14,7 +14,7 @@ public class PatrolAction : Action
     private void Patrol(StateController controller)
     {
         controller.NavMeshAgent.destination = controller.waypoints[controller.nextWayPoint].position;
-        controller.NavMeshAgent.Resume();
+        controller.NavMeshAgent.isStopped = false;
 
 
         if(controller.NavMeshAgent.remainingDistance <= controller.NavMeshAgent.stoppingDistance && !controller.NavMeshAgent.pathPending)

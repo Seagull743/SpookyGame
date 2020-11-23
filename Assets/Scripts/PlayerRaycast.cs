@@ -7,7 +7,6 @@ public class PlayerRaycast : MonoBehaviour
 {
     public Transform PlayerCamera;
    
-
     public static float MaxDistance = 20;
     
     
@@ -55,6 +54,7 @@ public class PlayerRaycast : MonoBehaviour
                 hitObject.GetComponent<InteractiveObject>().PlayerInteraction();
             }
 
+           
 
         }
        
