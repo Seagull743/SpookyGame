@@ -38,6 +38,7 @@ public class Note : InteractiveObject
         noteImage.SetActive(true);
         playerObject.GetComponent<CharacterController>().enabled = false;
         playerObject.GetComponentInChildren<Mouselook>().enabled = false;
+        playerObject.GetComponentInChildren<Flashlight>().enabled = false;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
@@ -52,6 +53,7 @@ public class Note : InteractiveObject
 
         playerObject.GetComponent<CharacterController>().enabled = true;
         playerObject.GetComponentInChildren<Mouselook>().enabled = true;
+        playerObject.GetComponentInChildren<Flashlight>().enabled = true;
     }
 
 }

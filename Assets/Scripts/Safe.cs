@@ -8,7 +8,7 @@ public class Safe : InteractiveObject
     public GameObject playerobject;
     public GameObject PasswordUI;
     public GameObject SubmitButtonUI;
-
+    public GameObject exitUI;
 
     public override void PlayerInteraction()
     {
@@ -20,6 +20,7 @@ public class Safe : InteractiveObject
     {
         PasswordUI.SetActive(false);
         SubmitButtonUI.SetActive(false);
+        exitUI.SetActive(false);
     }
 
     // Update is called once per frame
@@ -28,10 +29,13 @@ public class Safe : InteractiveObject
         
     }
 
+    
+    
     public void ShowPassword()
     {
         PasswordUI.SetActive(true);
         SubmitButtonUI.SetActive(true);
+        exitUI.SetActive(true);
         playerobject.GetComponent<CharacterController>().enabled = false;
         playerobject.GetComponentInChildren<Mouselook>().enabled = false;
         playerobject.GetComponentInChildren<Flashlight>().enabled = false;
@@ -43,6 +47,7 @@ public class Safe : InteractiveObject
     {
         PasswordUI.SetActive(false);
         SubmitButtonUI.SetActive(false);
+        exitUI.SetActive(false);
         playerobject.GetComponent<CharacterController>().enabled = true;
         playerobject.GetComponentInChildren<Mouselook>().enabled = true;
         playerobject.GetComponentInChildren<Flashlight>().enabled = true;

@@ -26,7 +26,7 @@ public class Password : MonoBehaviour
             }
             else
             {
-             //Remove Text
+                // Remove text
             }
         }
     }
