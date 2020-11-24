@@ -18,6 +18,7 @@ public class TurnLight : InteractiveObject
      void Start()
     {
         Lightduration = maxlight;
+        light.SetActive(false);
        
     }
 

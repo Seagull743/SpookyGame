@@ -8,8 +8,9 @@ public class Note : InteractiveObject
 {
 
     public GameObject playerObject;
-    
-    public GameObject noteImage;
+    public GM gm;
+    public Image noteImage;
+    public GameObject Hidenotbutton;
 
    // public AudioSource pickupSound;
 
@@ -18,7 +19,9 @@ public class Note : InteractiveObject
     // Start is called before the first frame update
     void Start()
     {
-        noteImage.SetActive(false);
+        Hidenotbutton.SetActive(false);
+        noteImage.enabled = false;
+        // noteImage.SetActive(false);
     }
 
     // Update is called once per frame
@@ -35,10 +38,13 @@ public class Note : InteractiveObject
 
     public void ShowNoteImage()
     {
-        noteImage.SetActive(true);
+        noteImage.enabled = true;
+        Hidenotbutton.SetActive(true);
+        //noteImage.SetActive(true);
         playerObject.GetComponent<CharacterController>().enabled = false;
         playerObject.GetComponentInChildren<Mouselook>().enabled = false;
         playerObject.GetComponentInChildren<Flashlight>().enabled = false;
+        gm.GetComponent<GM>().enabled = false;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
@@ -47,10 +53,13 @@ public class Note : InteractiveObject
 
     public void HideNoteImage()
     {
-        noteImage.SetActive(false);
+
+        Hidenotbutton.SetActive(false);
+        noteImage.enabled = false;
+        //noteImage.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-
+        gm.GetComponent<GM>().enabled = true;
         playerObject.GetComponent<CharacterController>().enabled = true;
         playerObject.GetComponentInChildren<Mouselook>().enabled = true;
         playerObject.GetComponentInChildren<Flashlight>().enabled = true;
