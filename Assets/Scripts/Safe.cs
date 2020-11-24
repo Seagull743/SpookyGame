@@ -9,15 +9,19 @@ public class Safe : InteractiveObject
     public GameObject PasswordUI;
     public GameObject SubmitButtonUI;
     public GameObject exitUI;
+    public Animator anim;
 
     public override void PlayerInteraction()
     {
-        ShowPassword();
+         //ShowPassword();
+        OpenSafe();
     }
 
     // Start is called before the first frame update
     void Start()
     {
+
+        anim = GetComponentInChildren<Animator>();
         PasswordUI.SetActive(false);
         SubmitButtonUI.SetActive(false);
         exitUI.SetActive(false);
@@ -29,8 +33,14 @@ public class Safe : InteractiveObject
         
     }
 
-    
-    
+    public void OpenSafe()
+    {
+        
+        anim.SetTrigger("OpenSafe");
+    }
+
+
+
     public void ShowPassword()
     {
         PasswordUI.SetActive(true);

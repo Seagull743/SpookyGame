@@ -9,8 +9,10 @@ public class Password : MonoBehaviour
     public InputField UserInput;
     public string USERINPUT;
     public Safe safe;
-    
+   
 
+   
+    
     public void CheckPassword()
     {
         USERINPUT = UserInput.text;
@@ -19,10 +21,8 @@ public class Password : MonoBehaviour
         {
             if(USERINPUT == password)
             {
-                safe.DisablePassword();
-
-
-                //Then play the animation of the safe etc...
+                //safe.DisablePassword();
+                safe.OpenSafe();    
             }
             else
             {
@@ -31,15 +31,8 @@ public class Password : MonoBehaviour
         }
     }
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    
+   
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }

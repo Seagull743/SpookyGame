@@ -13,12 +13,12 @@ public class TurnLight : InteractiveObject
     private bool lighton = false;
     public AudioSource lightsound;
     public AudioSource BrokenBulbSound;
-    
+    public GameObject lightswitchpivot;
 
      void Start()
     {
         Lightduration = maxlight;
-        
+       
     }
 
     public override void PlayerInteraction() 
@@ -90,6 +90,7 @@ public class TurnLight : InteractiveObject
         light.SetActive(true);
         lighton = true;
         lightsound.Play();
+        lightswitchpivot.transform.Rotate(-180.0f, 0.0f, 0.0f);
     }
       
     public void LightOff()
@@ -97,6 +98,7 @@ public class TurnLight : InteractiveObject
         light.SetActive(false);
         lighton = false;
         lightsound.Play();
+        lightswitchpivot.transform.Rotate(0.0f, 0.0f, 0.0f);
     }
          
                     
