@@ -99,9 +99,9 @@ public class TurnLight : InteractiveObject
         light.SetActive(false);
         lighton = false;
         lightsound.Play();
-        lightswitchpivot.transform.Rotate(0.0f, 0.0f, 0.0f);
+        lightswitchpivot.transform.Rotate(180.0f, 0.0f, 0.0f);
     }
          
-                    
+                    aw
  }
 

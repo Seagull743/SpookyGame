@@ -21,7 +21,7 @@ public class Password : MonoBehaviour
         {
             if(USERINPUT == password)
             {
-                //safe.DisablePassword();
+                safe.DisablePassword();
                 safe.OpenSafe();    
             }
             else

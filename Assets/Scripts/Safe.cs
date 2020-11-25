@@ -13,8 +13,8 @@ public class Safe : InteractiveObject
 
     public override void PlayerInteraction()
     {
-         //ShowPassword();
-        OpenSafe();
+        ShowPassword();
+        //OpenSafe();
     }
 
     // Start is called before the first frame update
@@ -37,6 +37,8 @@ public class Safe : InteractiveObject
     {
         
         anim.SetTrigger("OpenSafe");
+        
+        
     }
 
 
@@ -61,8 +63,8 @@ public class Safe : InteractiveObject
         playerobject.GetComponent<CharacterController>().enabled = true;
         playerobject.GetComponentInChildren<Mouselook>().enabled = true;
         playerobject.GetComponentInChildren<Flashlight>().enabled = true;
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
     
 }

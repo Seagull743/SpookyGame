@@ -15,15 +15,24 @@ public class AttackAction : Action
 
     private void Attack(StateController controller)
     {
+        
         RaycastHit hit;
 
         Debug.DrawRay(controller.eyes.position, controller.eyes.forward.normalized * controller.enemyStats.AttackRange, Color.red);
 
-        if (Physics.SphereCast(controller.eyes.position, controller.enemyStats.lookSphereCastRadius, controller.eyes.forward, out hit, controller.enemyStats.AttackRange)
-            && hit.collider.CompareTag("Player"))
+        if (Physics.Raycast(controller.eyes.position, controller.eyes.forward, out hit, controller.enemyStats.AttackRange) && hit.collider.CompareTag("Player"))
         {
-          
+            Debug.Log("Got you");
         }
+        
+        
+        //check if player is close enough to be attacked
+        //if they are then do attack
+            //sound
+            //make player fall over
+            //you died screen
+            //post processing 
+
     }
 
 }
