@@ -15,14 +15,13 @@ public class TurnLight : InteractiveObject
     public AudioSource BrokenBulbSound;
     public GameObject lightswitchpivot;
 
-     void Start()
+    void Start()
     {
         Lightduration = maxlight;
         light.SetActive(false);
-       
     }
 
-    public override void PlayerInteraction() 
+    public override void PlayerInteraction()
     {
         LightSwitchToggle();
     }
@@ -32,13 +31,13 @@ public class TurnLight : InteractiveObject
     {
         if (lighton && Lightduration >= 0)
         {
-           Lightduration -= Time.deltaTime * Lightdrain;
+            Lightduration -= Time.deltaTime * Lightdrain;
         }
-        
+
         if (Lightduration <= 0)
         {
             LightOff();
-            Lightduration = maxlight; 
+            Lightduration = maxlight;
         }
     }
 
@@ -57,10 +56,10 @@ public class TurnLight : InteractiveObject
             light.SetActive(true);
             yield return new WaitForSeconds(1);
             light.SetActive(false);
-        }   
+        }
     }
 
-    
+
 
     public void BrokenBulbEvent()
     {
@@ -69,31 +68,31 @@ public class TurnLight : InteractiveObject
         lightStand.SetActive(false);
         BrokenBulbSound.Play();
     }
-    
+
 
     public void LightSwitchToggle()
     {
-        if(lighton == true)
+        if (lighton == true)
         {
             LightOff();
         }
-        else 
+        else
         {
-            LightOn(); 
+            LightOn();
         }
-        
+
     }
 
-    
+
     public void LightOn()
     {
-      
+
         light.SetActive(true);
         lighton = true;
         lightsound.Play();
         lightswitchpivot.transform.Rotate(-180.0f, 0.0f, 0.0f);
     }
-      
+
     public void LightOff()
     {
         light.SetActive(false);
@@ -101,7 +100,6 @@ public class TurnLight : InteractiveObject
         lightsound.Play();
         lightswitchpivot.transform.Rotate(180.0f, 0.0f, 0.0f);
     }
-         
-                    aw
- }
+
+}              
 
