@@ -6,8 +6,8 @@ using UnityEngine.UI;
 [CreateAssetMenu (menuName = "PluggableAI/Actions/Attack")]
 public class AttackAction : Action
 {
-   
-   
+    public GameObject Monster;
+
     public override void Act(StateController controller)
     {
         Attack (controller);
@@ -22,7 +22,15 @@ public class AttackAction : Action
 
         if (Physics.Raycast(controller.eyes.position, controller.eyes.forward, out hit, controller.enemyStats.AttackRange) && hit.collider.CompareTag("Player"))
         {
-            Debug.Log("Got you");
+            GameObject hitObject = hit.transform.gameObject;
+
+            if (hitObject.GetComponent<PlayerDeath>())
+            {
+                Debug.Log("Got you");
+                hitObject.GetComponent<PlayerDeath>().playerdeath();
+                
+            }
+           
         }
         
         
