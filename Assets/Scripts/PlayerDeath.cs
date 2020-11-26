@@ -9,6 +9,7 @@ public class PlayerDeath : MonoBehaviour
     public GameObject player;
     public GameObject DeadScreen;
     public GameObject RedScreen;
+   
     
     // Start is called before the first frame update
     void Start()
@@ -20,7 +21,7 @@ public class PlayerDeath : MonoBehaviour
 
     public void playerdeath()
     {
-        anim.SetBool("death", true);
+        StartCoroutine(DeathFallAnimation());
         RedScreen.SetActive(true);
         player.GetComponentInChildren<Mouselook>().enabled = false;
         player.GetComponentInChildren<Flashlight>().enabled = false;
@@ -28,6 +29,11 @@ public class PlayerDeath : MonoBehaviour
 
     }
 
+IEnumerator DeathFallAnimation()
+    {
+        yield return new WaitForSeconds(4);
+        anim.SetBool("death", true);
+    }
 
  IEnumerator Deathscreenwaittime()
     {  

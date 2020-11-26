@@ -11,8 +11,8 @@ public class Note : InteractiveObject
     public GM gm;
     public Image noteImage;
     public GameObject Hidenotbutton;
-
-   // public AudioSource pickupSound;
+  
+    // public AudioSource pickupSound;
 
 
 
@@ -30,17 +30,20 @@ public class Note : InteractiveObject
 
     }
 
-    public override  void PlayerInteraction() 
+    public override void PlayerInteraction()
     {
-        ShowNoteImage();  
-    }
+         ShowNoteImage();
+    }   
 
 
+    
+    
     public void ShowNoteImage()
     {
+        
+
         noteImage.enabled = true;
         Hidenotbutton.SetActive(true);
-        //noteImage.SetActive(true);
         playerObject.GetComponent<CharacterController>().enabled = false;
         playerObject.GetComponentInChildren<Mouselook>().enabled = false;
         playerObject.GetComponentInChildren<Flashlight>().enabled = false;
@@ -48,8 +51,12 @@ public class Note : InteractiveObject
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
-        //pickupSound.Play();
+
+        
     }
+
+    
+    
 
     public void HideNoteImage()
     {

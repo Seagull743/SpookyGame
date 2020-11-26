@@ -6,6 +6,7 @@ using UnityEngine;
 [CreateAssetMenu (menuName = "PluggableAI/Actions/Chase")]
 public class ChaseAction : Action
 {
+    
     public override void Act(StateController controller)
     {
         Chase(controller);
@@ -14,6 +15,7 @@ public class ChaseAction : Action
 
     private void Chase(StateController controller)
     {
+       
         controller.NavMeshAgent.destination = controller.playerTarget.position;
         controller.NavMeshAgent.isStopped = false;
     }

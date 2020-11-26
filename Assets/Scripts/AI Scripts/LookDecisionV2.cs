@@ -9,6 +9,7 @@ public class LookDecisionV2 : Decision
 {
     [SerializeField] private LayerMask playerLM;
     [SerializeField] private LayerMask wallsOnly;
+    
 
     private StateController controller;
 
@@ -61,21 +62,30 @@ public class LookDecisionV2 : Decision
                 if (!Physics.Raycast((controller.transform.position + new Vector3(0, controller.eyes.position.y, 0)) - controller.transform.forward, dirToTarget, out hit, dist, wallsOnly))
                 {
                     Debug.Log("Can see the player");
+                    
                     Debug.DrawLine(controller.transform.position + new Vector3(0, controller.eyes.position.y, 0), hit.point, Color.green);
+
+                    
+
+                    controller.gameObject.GetComponent<MonsterAudio>().Playchasesound();
                     return true;
                 }
 
                 else
                 {
                     Debug.DrawLine(controller.transform.position + new Vector3(0, controller.eyes.position.y, 0), hit.point, Color.blue);
+                    controller.gameObject.GetComponent<MonsterAudio>().Stopchasesound();
                     return false;
+                    
                 }
             }
             else
             {
+                controller.gameObject.GetComponent<MonsterAudio>().Stopchasesound();
                 return false;
             }
         }
+        controller.gameObject.GetComponent<MonsterAudio>().Stopchasesound();
         return false;
 
     }

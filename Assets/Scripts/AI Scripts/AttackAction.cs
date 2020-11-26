@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class AttackAction : Action
 {
     public GameObject Monster;
+   
 
     public override void Act(StateController controller)
     {
@@ -26,7 +27,10 @@ public class AttackAction : Action
 
             if (hitObject.GetComponent<PlayerDeath>())
             {
+
+               
                 Debug.Log("Got you");
+                controller.gameObject.GetComponent<MonsterAudio>().Attacksound();
                 hitObject.GetComponent<PlayerDeath>().playerdeath();
                 
             }

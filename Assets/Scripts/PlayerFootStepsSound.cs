@@ -18,6 +18,7 @@ public class PlayerFootStepsSound : MonoBehaviour
     
     public float stepdistance;
 
+    public float footstep;
 
     // Start is called before the first frame update
     void Awake()
@@ -41,7 +42,7 @@ public class PlayerFootStepsSound : MonoBehaviour
 
             if (accumalatedDistance > stepdistance)
             {
-                footstepsound.volume = Random.Range(volumeMin, VolumeMax);
+                footstepsound.volume = footstep;          // Random.Range(volumeMin, VolumeMax);
                 footstepsound.clip = footstepclip[Random.Range(0, footstepclip.Length)];
                 footstepsound.Play();
 
