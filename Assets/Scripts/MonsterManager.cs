@@ -17,20 +17,24 @@ public class MonsterManager : MonoBehaviour
     }
 
     
+
+
     public void SpawnMonster()
     {
+        while (MonsterActive == false)
         StartCoroutine(MonsterSpawner());
     }
 
     IEnumerator MonsterSpawner()
     {
-        
-        if(!MonsterActive == false)
-        {
-            yield return new WaitForSeconds(3);
-            Monster.SetActive(true);
-            StartCoroutine(DespawnMonster());
-        }
+        MonsterActive = true;    
+        yield return new WaitForSeconds(3);
+        Monster.SetActive(true);
+        yield return new WaitForSeconds(Random.Range(12f, 20f));
+        Monster.SetActive(false);
+        yield return new WaitForSeconds(Random.Range(10f, 15f));
+        yield return MonsterActive = false;
+
         
         
     }

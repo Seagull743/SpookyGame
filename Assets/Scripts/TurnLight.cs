@@ -42,6 +42,16 @@ public class TurnLight : InteractiveObject
     }
 
 
+    public void StartLightEvent()
+    {
+        StartCoroutine(FlashingLights());
+    }
+    
+    
+    public 
+
+
+
     IEnumerator FlashingLights()
     {
 

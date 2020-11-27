@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GM : MonoBehaviour
 {
@@ -9,9 +10,9 @@ public class GM : MonoBehaviour
     [SerializeField] private GameObject interactcross;
     [SerializeField] private GameObject normalcross;
     public GameObject player;
-   
+    public GameObject InstructionText;
 
-    private void Awake()
+     void Awake()
     {
         if(instance == null)
         {
@@ -21,6 +22,22 @@ public class GM : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        InstructionText.SetActive(false);
+    }
+
+    void Start()
+    {
+        StartCoroutine(TextSeconds());
+    }
+
+
+    IEnumerator TextSeconds()
+    {
+        yield return new WaitForSeconds(1);
+        InstructionText.SetActive(true);
+        yield return new WaitForSeconds(3);
+        InstructionText.SetActive(false);
     }
 
     public void InteractCross()

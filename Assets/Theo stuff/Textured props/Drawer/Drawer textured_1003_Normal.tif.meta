@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: 6a61f51a488638a4f8d4277c9a1eb5bc
+=======
+guid: 92db42aeda9d24944860f3b0d8b46b08
+>>>>>>> Stashed changes
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

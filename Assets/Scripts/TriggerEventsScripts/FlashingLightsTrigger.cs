@@ -23,19 +23,19 @@ public class FlashingLightsTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            StartCoroutine("StartEventLaterOn");           
+            StartCoroutine(StartEventLaterOn());          
         }
     }
 
 
     IEnumerator StartEventLaterOn()
     {
-        yield return new WaitForSeconds(18);
-        TL.StartCoroutine("FlashingLights");
-        yield return new WaitForSeconds(20);
+        yield return new WaitForSeconds(7);
+        TL.StartLightEvent();
+        Destroy(gameObject);
     }
 
 
-    //Make a draw that the player can't open but it automatically gets open further into the game
+    
 
 }
