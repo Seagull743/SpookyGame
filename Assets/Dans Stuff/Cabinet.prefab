@@ -59,13 +59,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 869851402049750186}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0.0000000012805681, y: -0, z: 0.0019833876, w: 0.99999803}
   m_LocalPosition: {x: 0.00000026868986, y: 0, z: 0.040001392}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6243495816595399653}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.227}
 --- !u!82 &5193148532320908586
 AudioSource:
   m_ObjectHideFlags: 0
@@ -76,10 +76,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
+  m_audioClip: {fileID: 8300000, guid: 324f014033eb17949822071b56766c4d, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.498
+  m_Pitch: 3
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -122,7 +122,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -203,10 +203,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
+  m_audioClip: {fileID: 8300000, guid: 093063225286120488684adbff7e99bf, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.433
+  m_Pitch: 1.67
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -249,7 +249,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -301,6 +301,7 @@ GameObject:
   - component: {fileID: 2503678752633817722}
   - component: {fileID: 6609623633904839490}
   - component: {fileID: 6077207116403705954}
+  - component: {fileID: 1968507364}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -386,6 +387,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.06350471, y: 2.5076158, z: 1.6011223}
   m_Center: {x: -0.0000074468553, y: 0.0000038146973, z: 0}
+--- !u!114 &1968507364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2055154677114682815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0756f03cf25b80549aeeada7a154a94c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dooropensound: {fileID: 1705714563899108447}
+  doorclosesound: {fileID: 918841854370517189}
 --- !u!1 &2171037750614671403
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,10 +442,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
+  m_audioClip: {fileID: 8300000, guid: 093063225286120488684adbff7e99bf, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.379
+  m_Pitch: 1.79
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -473,7 +488,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -554,10 +569,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
+  m_audioClip: {fileID: 8300000, guid: 324f014033eb17949822071b56766c4d, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.415
+  m_Pitch: 3
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -600,7 +615,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -652,6 +667,7 @@ GameObject:
   - component: {fileID: 4959527876083201990}
   - component: {fileID: 6993405090999287490}
   - component: {fileID: 1132204119182824036}
+  - component: {fileID: 1500546559}
   m_Layer: 0
   m_Name: Door (1)
   m_TagString: Untagged
@@ -667,8 +683,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2686834718736215538}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 2.4500077, y: -0.3133099, z: -0.000013113025}
-  m_LocalScale: {x: 3.5493498, y: 3.5493498, z: 3.5493498}
+  m_LocalPosition: {x: -2.4499938, y: -0.3133099, z: -0.000013589863}
+  m_LocalScale: {x: 3.54935, y: 3.5493498, z: 3.54935}
   m_Children:
   - {fileID: 6309010172230621427}
   - {fileID: 2396575986886044594}
@@ -737,6 +753,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.06350471, y: 2.5076158, z: 1.6011223}
   m_Center: {x: 0.00000018253927, y: 0.0000038146973, z: 0}
+--- !u!114 &1500546559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2686834718736215538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0756f03cf25b80549aeeada7a154a94c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dooropensound: {fileID: 5617283249258343419}
+  doorclosesound: {fileID: 3905033053741511752}
 --- !u!1 &2837319991518858576
 GameObject:
   m_ObjectHideFlags: 0
@@ -746,8 +776,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6906817508634771034}
+  - component: {fileID: 743585086}
   m_Layer: 0
-  m_Name: Hinge
+  m_Name: Right Hinge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -761,13 +792,32 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2837319991518858576}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 6.83, y: 1.78, z: 4.14}
+  m_LocalPosition: {x: 6.83, y: 1.78, z: -0.85}
   m_LocalScale: {x: 0.99999976, y: 1, z: 0.99999976}
   m_Children:
   - {fileID: 610676311664183209}
   m_Father: {fileID: 662126430548846231}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &743585086
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2837319991518858576}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2f374fdf66ffc164d9708d02c2ce014e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2838808989396680163
 GameObject:
   m_ObjectHideFlags: 0
@@ -809,10 +859,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
+  m_audioClip: {fileID: 8300000, guid: 324f014033eb17949822071b56766c4d, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.391
+  m_Pitch: 3
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -855,7 +905,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -936,10 +986,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
+  m_audioClip: {fileID: 8300000, guid: 093063225286120488684adbff7e99bf, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.426
+  m_Pitch: 1.6
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -982,7 +1032,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -1034,6 +1084,7 @@ GameObject:
   - component: {fileID: 4102802657866813214}
   - component: {fileID: 6441674736144099713}
   - component: {fileID: 7520527581566837824}
+  - component: {fileID: 274743941}
   m_Layer: 0
   m_Name: Door (3)
   m_TagString: Untagged
@@ -1049,8 +1100,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3090855302179520049}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 2.5899987, y: -0.3133099, z: -0.00001215935}
-  m_LocalScale: {x: 3.5493498, y: 3.5493498, z: 3.5493498}
+  m_LocalPosition: {x: -2.4000027, y: -0.3133099, z: -0.000012636187}
+  m_LocalScale: {x: 3.54935, y: 3.5493498, z: 3.54935}
   m_Children:
   - {fileID: 5179693834285910416}
   - {fileID: 3529213285322843603}
@@ -1119,6 +1170,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.06350471, y: 2.5076158, z: 1.6011223}
   m_Center: {x: -0.0000074468553, y: 0.0000038146973, z: 0}
+--- !u!114 &274743941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3090855302179520049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0756f03cf25b80549aeeada7a154a94c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dooropensound: {fileID: 1017273266449049664}
+  doorclosesound: {fileID: 4718618894924350569}
 --- !u!1 &3262289509960275153
 GameObject:
   m_ObjectHideFlags: 0
@@ -1128,8 +1193,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4135673289500572645}
+  - component: {fileID: 915710709}
   m_Layer: 0
-  m_Name: Hinge
+  m_Name: Left Hinge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1150,6 +1216,25 @@ Transform:
   m_Father: {fileID: 662126430548846231}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &915710709
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3262289509960275153}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 16dc802c4eb784e44ad7ebaaae04c0aa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3780983774677139166
 GameObject:
   m_ObjectHideFlags: 0
@@ -1191,10 +1276,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 093063225286120488684adbff7e99bf, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.337
+  m_Pitch: 1.64
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -1237,7 +1322,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -1318,10 +1403,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
+  m_audioClip: {fileID: 8300000, guid: 324f014033eb17949822071b56766c4d, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.421
+  m_Pitch: 3
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -1364,7 +1449,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -1413,8 +1498,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3395748484335149501}
+  - component: {fileID: 2040408996}
   m_Layer: 0
-  m_Name: Hinge
+  m_Name: Right Hinge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1427,14 +1513,33 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6078947473729617848}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 6.83, y: 1.78, z: -7.93}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 6.83, y: 1.78, z: -12.83}
   m_LocalScale: {x: 0.99999976, y: 1, z: 0.99999976}
   m_Children:
   - {fileID: 3461400050400032285}
   m_Father: {fileID: 662126430548846231}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!95 &2040408996
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6078947473729617848}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2f374fdf66ffc164d9708d02c2ce014e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6219478657391440293
 GameObject:
   m_ObjectHideFlags: 0
@@ -1444,8 +1549,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5273314954520608499}
+  - component: {fileID: 582788234}
   m_Layer: 0
-  m_Name: Hinge
+  m_Name: Left Hinge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1466,6 +1572,25 @@ Transform:
   m_Father: {fileID: 662126430548846231}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &582788234
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6219478657391440293}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 16dc802c4eb784e44ad7ebaaae04c0aa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7101131586533506604
 GameObject:
   m_ObjectHideFlags: 0
@@ -1477,7 +1602,7 @@ GameObject:
   - component: {fileID: 3229260235268840508}
   - component: {fileID: 2256521985699647729}
   - component: {fileID: 2957657045176041138}
-  - component: {fileID: 6477802980288469325}
+  - component: {fileID: 647435634}
   m_Layer: 0
   m_Name: polySurface107
   m_TagString: Untagged
@@ -1548,8 +1673,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6477802980288469325
-BoxCollider:
+--- !u!64 &647435634
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1558,9 +1683,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.268374, y: 2.8940585, z: 6.932158}
-  m_Center: {x: -0.0143415965, y: 0.000003874302, z: 0.0000011920943}
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8061540986286507860, guid: ffada0733bd155a4890eb7c04856e41a, type: 3}
 --- !u!1 &8187661413211331417
 GameObject:
   m_ObjectHideFlags: 0
@@ -1573,6 +1699,7 @@ GameObject:
   - component: {fileID: 5965449104165726665}
   - component: {fileID: 7454512129361656073}
   - component: {fileID: 2108264160652434437}
+  - component: {fileID: 982372559}
   m_Layer: 0
   m_Name: Door (2)
   m_TagString: Untagged
@@ -1658,3 +1785,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.06350471, y: 2.5076158, z: 1.6011223}
   m_Center: {x: -0.0000074468553, y: 0.0000038146973, z: 0}
+--- !u!114 &982372559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8187661413211331417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0756f03cf25b80549aeeada7a154a94c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dooropensound: {fileID: 7212279354903803547}
+  doorclosesound: {fileID: 5193148532320908586}

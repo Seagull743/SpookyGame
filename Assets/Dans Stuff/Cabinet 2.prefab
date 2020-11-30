@@ -248,8 +248,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 7ccff414841b853469025c78d4effe61, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.636
+  m_PlayOnAwake: 0
+  m_Volume: 0.475
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -374,9 +374,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b9b68cd7dff8b21488a4ea235fcfcbf9, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.624
+  m_audioClip: {fileID: 8300000, guid: 7ccff414841b853469025c78d4effe61, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.54
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -535,9 +535,9 @@ GameObject:
   - component: {fileID: 1883084493034644864}
   - component: {fileID: 3439879912708519233}
   - component: {fileID: 3005559098106206967}
-  - component: {fileID: 8177306003791281776}
   - component: {fileID: 5840379742964368412}
   - component: {fileID: 5840379742964368411}
+  - component: {fileID: 368068709}
   m_Layer: 0
   m_Name: Box Collider Draw
   m_TagString: Untagged
@@ -553,7 +553,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2428500817720414020}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.83, y: 1.285, z: -2.217}
+  m_LocalPosition: {x: -0.75, y: 1.285, z: -2.217}
   m_LocalScale: {x: 3.5, y: 3.5, z: 3.5}
   m_Children:
   - {fileID: 6059510990247802532}
@@ -610,19 +610,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8177306003791281776
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2428500817720414020}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.6129552, y: 0.29401168, z: 0.4276385}
-  m_Center: {x: 0.00015997891, y: -0.000000044703484, z: -0.002612964}
 --- !u!95 &5840379742964368412
 Animator:
   serializedVersion: 3
@@ -633,7 +620,7 @@ Animator:
   m_GameObject: {fileID: 2428500817720414020}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: fd775f7f43c0bca44ae63747225f4472, type: 2}
+  m_Controller: {fileID: 9100000, guid: 132e19f0fca864d44ac3146acb139787, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -657,6 +644,20 @@ MonoBehaviour:
   drawopened: 0
   draweropensound: {fileID: 7793370660386135140}
   drawerclosesound: {fileID: 228721923690545537}
+--- !u!64 &368068709
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2428500817720414020}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3885248408432238867, guid: d8a32e3b12c826f4f8027c1c5c25da50, type: 3}
 --- !u!1 &4827988595633368536
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,6 +732,7 @@ GameObject:
   - component: {fileID: 8792992172017313530}
   - component: {fileID: 5561228678112556897}
   - component: {fileID: 5840379742964368410}
+  - component: {fileID: 1819709620}
   m_Layer: 0
   m_Name: Mesh Collider Draw
   m_TagString: Untagged
@@ -746,7 +748,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6420834309286286587}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.84, y: 1.285, z: 0.87}
+  m_LocalPosition: {x: -0.706, y: 1.285, z: 0.87}
   m_LocalScale: {x: 3.5, y: 3.5, z: 3.199}
   m_Children:
   - {fileID: 8215710602323436556}
@@ -832,6 +834,25 @@ MonoBehaviour:
   drawopened: 0
   draweropensound: {fileID: 7539638079687201747}
   drawerclosesound: {fileID: 3469065253531783799}
+--- !u!95 &1819709620
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6420834309286286587}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9d9a176a06044ef4ba7bc097f2117522, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6596219993831022246
 GameObject:
   m_ObjectHideFlags: 0
@@ -874,8 +895,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9824699bb4ad01a449a502dabc5c43e9, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.679
+  m_PlayOnAwake: 0
+  m_Volume: 0.56
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1033,8 +1054,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9824699bb4ad01a449a502dabc5c43e9, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.546
+  m_PlayOnAwake: 0
+  m_Volume: 0.54
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1191,7 +1212,7 @@ GameObject:
   - component: {fileID: 8011836145868819790}
   - component: {fileID: 3861444487234601715}
   - component: {fileID: 1738762161047213170}
-  - component: {fileID: 6992774192253635326}
+  - component: {fileID: 230125748}
   m_Layer: 0
   m_Name: polySurface179
   m_TagString: Untagged
@@ -1262,8 +1283,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6992774192253635326
-BoxCollider:
+--- !u!64 &230125748
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1272,6 +1293,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.8224816, y: 1.0837748, z: 1.7988935}
-  m_Center: {x: -0.08876624, y: 0.041887373, z: -0.39944682}
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4960136813821076405, guid: d8a32e3b12c826f4f8027c1c5c25da50, type: 3}
