@@ -31,7 +31,7 @@ public class PlayerDeath : MonoBehaviour
 IEnumerator DeathAnimWait()
     {
         yield return new WaitForSeconds(1);
-        anim.SetBool("Dead", true);
+        anim.SetBool("death", true);
         DeathSound.Play();
         StartCoroutine(Deathscreenwaittime());
     }
