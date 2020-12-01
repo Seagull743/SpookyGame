@@ -9,15 +9,19 @@ public class MonsterManager : MonoBehaviour
     public List<Transform> waypoints;
     public GameObject Monster;
     public bool MonsterActive = false;
+    public GameObject blood;
+
+
     // Start is called before the first frame update
     void Start()
     {
         state.SetupAI(aiActive, waypoints);
         Monster.SetActive(false);
+        blood.SetActive(false);
     }
 
     
-
+    // Monster
 
     public void SpawnMonster()
     {
@@ -45,5 +49,16 @@ public class MonsterManager : MonoBehaviour
         yield return new WaitForSeconds(Random.Range(10, 20));
         Monster.SetActive(false);
     }
+
+
+    // Paranormal Events
+
+
+    public void BloodSpawn()
+    {
+        blood.SetActive(true);
+    }
+
+
 
 }

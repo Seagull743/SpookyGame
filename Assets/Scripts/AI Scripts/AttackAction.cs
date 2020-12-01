@@ -27,10 +27,7 @@ public class AttackAction : Action
 
             if (hitObject.GetComponent<PlayerDeath>())
             {
-
-               
-                Debug.Log("Got you");
-                controller.gameObject.GetComponent<MonsterAudio>().Attacksound();
+             
                 hitObject.GetComponent<PlayerDeath>().playerdeath();
                 
             }

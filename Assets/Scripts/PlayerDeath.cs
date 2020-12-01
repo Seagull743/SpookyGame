@@ -8,37 +8,37 @@ public class PlayerDeath : MonoBehaviour
     public Animator anim;
     public GameObject player;
     public GameObject DeadScreen;
-    public GameObject RedScreen;
-   
+    public GameObject ghost;
+    public AudioSource DeathSound;
     
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponentInChildren<Animator>();
         DeadScreen.SetActive(false);
-        RedScreen.SetActive(false);
+        
     }
 
     public void playerdeath()
     {
-        StartCoroutine(DeathFallAnimation());
-        RedScreen.SetActive(true);
-        player.GetComponentInChildren<Mouselook>().enabled = false;
-        player.GetComponentInChildren<Flashlight>().enabled = false;
-        StartCoroutine(Deathscreenwaittime());
+        
+        Destroy(ghost);
 
+        StartCoroutine(DeathAnimWait());
+        
+       
     }
-
-IEnumerator DeathFallAnimation()
+IEnumerator DeathAnimWait()
     {
-        yield return new WaitForSeconds(4);
-        anim.SetBool("death", true);
+        yield return new WaitForSeconds(1);
+        anim.SetBool("Dead", true);
+        DeathSound.Play();
+        StartCoroutine(Deathscreenwaittime());
     }
 
  IEnumerator Deathscreenwaittime()
     {  
-        yield return new WaitForSeconds(2);
-        RedScreen.SetActive(false);
+        yield return new WaitForSeconds(3);
         DeadScreen.SetActive(true);
     }
 }
