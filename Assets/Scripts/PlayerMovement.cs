@@ -29,9 +29,9 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        playerfootsteps.volumeMin = walkvolumemin;
-        playerfootsteps.VolumeMax = walkvolimemax;
-        playerfootsteps.stepdistance = walkStepDistance;
+        //playerfootsteps.volumeMin = walkvolumemin;
+        //playerfootsteps.VolumeMax = walkvolimemax;
+        //playerfootsteps.stepdistance = walkStepDistance;
 
 
     }
@@ -40,26 +40,35 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+
+        // "gravity"
         
-        if(isGrounded && velocity.y < 0)
-        {
-            velocity.y = -2f;
-        }
 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
-        Vector3 move = transform.right * x + transform.forward * z;
+        Vector3 moveAmount = transform.right * x + transform.forward * z;
 
-        controller.Move(move * speed * Time.deltaTime);
+        moveAmount = moveAmount * speed * Time.deltaTime;
 
-        playerfootsteps.stepdistance = walkStepDistance;
-        playerfootsteps.volumeMin = walkvolumemin;
-        playerfootsteps.VolumeMax = walkvolimemax;
+        if (!isGrounded) //&& velocity.y < 0
+        {
+            moveAmount.y += gravity * Time.deltaTime;
+        }
+        else
+        {
+            moveAmount.y = 0;
+        }
 
-        velocity.y += gravity * Time.deltaTime;
+        controller.Move(moveAmount);
 
-        controller.Move(velocity * Time.deltaTime);
+        //playerfootsteps.stepdistance = walkStepDistance;
+        //playerfootsteps.volumeMin = walkvolumemin;
+        //playerfootsteps.VolumeMax = walkvolimemax;
+
+        //velocity.y += gravity * Time.deltaTime;
+
+        //controller.Move(velocity * Time.deltaTime);
     }
 
 

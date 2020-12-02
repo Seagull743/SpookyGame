@@ -11,7 +11,7 @@ public class GM : MonoBehaviour
     [SerializeField] private GameObject normalcross;
     public GameObject player;
     public GameObject InstructionText;
-
+    private float timer;
      void Awake()
     {
         if(instance == null)
@@ -24,6 +24,16 @@ public class GM : MonoBehaviour
         }
 
         InstructionText.SetActive(false);
+    }
+
+    private void Update()
+    {
+        timer += Time.deltaTime;
+        if(timer > 1)
+        {
+            Debug.Log("1");
+            timer = 0f;
+        }
     }
 
     void Start()
