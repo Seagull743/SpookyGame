@@ -5,10 +5,19 @@ using UnityEngine;
 public class CrossTurnTrigger : MonoBehaviour
 {
     public CrossTurn CT;
-    public CrossTurn Cross1;
-    public CrossTurn Cross2;
-    public CrossTurn Cross3;
-   
+    public CrossTurn CT1;
+    public CrossTurn CT2;
+    public CrossTurn CT3;
+    public CrossTurn CT4;
+    public CrossTurn CT5;
+    public CrossTurn CT6;
+    public CrossTurn CT7;
+    public CrossTurn CT8;
+    public CrossTurn CT9;
+
+
+
+
     public GameObject Crosses;
 
     public GameObject Blood;
@@ -16,13 +25,11 @@ public class CrossTurnTrigger : MonoBehaviour
 
     void Start()
     {
+
         Blood.SetActive(false);
     }
 
-    public void RevealBlood()
-    {
-        Blood.SetActive(true);
-    }
+    
 
 
     private void OnTriggerEnter(Collider other)
@@ -30,9 +37,16 @@ public class CrossTurnTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             CT.TurnCross();
-            Cross1.TurnCross();
-            Cross2.TurnCross();
-            Cross3.TurnCross();
+            CT1.TurnCross();
+            CT2.TurnCross();
+            CT3.TurnCross();
+            CT4.TurnCross();
+            CT5.TurnCross();
+            CT6.TurnCross();
+            CT7.TurnCross();
+            CT8.TurnCross();
+            CT9.TurnCross();
+
             StartCoroutine(BloodReveal());
         }
 
@@ -45,5 +59,7 @@ public class CrossTurnTrigger : MonoBehaviour
         Blood.SetActive(true);
         Destroy(gameObject);
     }
+   
+    
 
 }

@@ -551,10 +551,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 28a69b0756d101141b00df6e998aa679, type: 3}
   - {fileID: 8300000, guid: 85efe6da7873e974a90c0e7e8b9bcb8c, type: 3}
   - {fileID: 8300000, guid: bcb982329f5f95449ba59415e16236f4, type: 3}
-  volumeMin: 1
-  VolumeMax: 3
-  stepdistance: 5
-  footstepVolume: 0
+  volumeMin: 0.2
+  VolumeMax: 0.4
+  stepdistance: 0.7
+  footstepVolume: 3
 --- !u!114 &667557597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -591,7 +591,7 @@ MonoBehaviour:
   groundDistance: 0.4
   groundMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
 --- !u!1 &1924890205343174624
 GameObject:
   m_ObjectHideFlags: 0
@@ -716,7 +716,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3306261491681632124}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.005, y: -1.967, z: 0.176}
+  m_LocalPosition: {x: -0.005, y: -1.9, z: 0.176}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1924890204688602057}
