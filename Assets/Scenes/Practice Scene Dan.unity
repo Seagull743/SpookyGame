@@ -2851,6 +2851,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aec54d7a991d7b644b145d550a4b7831, type: 3}
+--- !u!1 &807560225 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4977774514133016379, guid: eecba0b2b5fd2664284ea563bd89e682, type: 3}
+  m_PrefabInstance: {fileID: 1164570315}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &812511662
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4018,7 +4023,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 374874092849297783, guid: eecba0b2b5fd2664284ea563bd89e682, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 374874093107786864, guid: eecba0b2b5fd2664284ea563bd89e682, type: 3}
       propertyPath: m_IsActive
@@ -5635,6 +5640,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LockedSound: {fileID: 846026553}
+  DoorLockedText: {fileID: 807560225}
 --- !u!1001 &1971426561
 PrefabInstance:
   m_ObjectHideFlags: 0
