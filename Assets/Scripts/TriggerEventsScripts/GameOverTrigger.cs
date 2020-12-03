@@ -2,16 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpookyDoorOpenTrigger : MonoBehaviour
+public class GameOverTrigger : MonoBehaviour
 {
-    public Door door;
+    public GM gm;
+
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            door.DoorOpen();
-            Destroy(gameObject);
+            gm.Youwin();
         }
     }
+
+
+
 }

@@ -9,7 +9,7 @@ public class Password : MonoBehaviour
     public InputField UserInput;
     public string USERINPUT;
     public Safe safe;
-   
+    
 
    
     

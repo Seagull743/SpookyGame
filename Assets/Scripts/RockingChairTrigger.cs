@@ -2,16 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpookyDoorOpenTrigger : MonoBehaviour
+public class RockingChairTrigger : MonoBehaviour
 {
-    public Door door;
+
+    public RockingChairAnimation chair;
+
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            door.DoorOpen();
+            chair.RockingChair();
             Destroy(gameObject);
         }
     }
+
 }

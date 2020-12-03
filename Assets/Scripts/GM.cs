@@ -11,7 +11,11 @@ public class GM : MonoBehaviour
     [SerializeField] private GameObject normalcross;
     public GameObject player;
     public GameObject InstructionText;
-   
+
+    public GameObject YouWinScreen;
+
+
+
      void Awake()
     {
         if(instance == null)
@@ -31,6 +35,7 @@ public class GM : MonoBehaviour
     void Start()
     {
         StartCoroutine(TextSeconds());
+        YouWinScreen.SetActive(false);
     }
 
 
@@ -47,8 +52,18 @@ public class GM : MonoBehaviour
         
         interactcross.SetActive(true);
         normalcross.SetActive(false);
+    }
 
-       
+    public void Youwin()
+    {
+        StartCoroutine(WaittimeForVictory());
+    }
+
+    IEnumerator WaittimeForVictory()
+    {
+        YouWinScreen.SetActive(true);
+        yield return new WaitForSeconds(3);
+        //Load the main menu scene
     }
 
     public void Normalcross()
@@ -56,8 +71,5 @@ public class GM : MonoBehaviour
         interactcross.SetActive(false);
         normalcross.SetActive(true);
     }
-
-
-
     
 }

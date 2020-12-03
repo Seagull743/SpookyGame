@@ -10,11 +10,14 @@ public class Safe : InteractiveObject
     public GameObject SubmitButtonUI;
     public GameObject exitUI;
     public Animator anim;
+    public AudioSource safe1;
+    public AudioSource safe2;
+
 
     public override void PlayerInteraction()
     {
         ShowPassword();
-        //OpenSafe();
+        
     }
 
     // Start is called before the first frame update
@@ -35,13 +38,12 @@ public class Safe : InteractiveObject
 
     public void OpenSafe()
     {
-        
+        safe1.Play();
         anim.SetTrigger("OpenSafe");
-        
-        
+        safe2.Play();
     }
 
-
+   
 
     public void ShowPassword()
     {
@@ -51,6 +53,7 @@ public class Safe : InteractiveObject
         playerobject.GetComponent<CharacterController>().enabled = false;
         playerobject.GetComponentInChildren<Mouselook>().enabled = false;
         playerobject.GetComponentInChildren<Flashlight>().enabled = false;
+        playerobject.GetComponent<PlayerFootStepsSound>().enabled = false;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
@@ -63,6 +66,7 @@ public class Safe : InteractiveObject
         playerobject.GetComponent<CharacterController>().enabled = true;
         playerobject.GetComponentInChildren<Mouselook>().enabled = true;
         playerobject.GetComponentInChildren<Flashlight>().enabled = true;
+        playerobject.GetComponent<PlayerFootStepsSound>().enabled = true;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }

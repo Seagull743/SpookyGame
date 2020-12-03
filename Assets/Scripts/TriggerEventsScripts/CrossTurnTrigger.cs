@@ -16,8 +16,6 @@ public class CrossTurnTrigger : MonoBehaviour
     public CrossTurn CT9;
 
 
-
-
     public GameObject Crosses;
 
     public GameObject Blood;
@@ -28,10 +26,7 @@ public class CrossTurnTrigger : MonoBehaviour
 
         Blood.SetActive(false);
     }
-
-    
-
-
+   
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -61,5 +56,4 @@ public class CrossTurnTrigger : MonoBehaviour
     }
    
     
-
 }

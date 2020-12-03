@@ -39,7 +39,7 @@ public class Door : InteractiveObject
     
 
 
-    private void DoorOpen()
+    public void DoorOpen()
     {
         opened = !opened;
         anim.SetBool("Opened", opened);

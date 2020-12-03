@@ -37,7 +37,7 @@ public class PlayerFootStepsSound : MonoBehaviour
         Vector3 playerVelocity = characterController.velocity;
         horizontalVelocity.x = playerVelocity.x;
         horizontalVelocity.y = playerVelocity.z;
-        Debug.Log(horizontalVelocity.magnitude);
+       
 
         //if playermovement.isGrounded == true {
         CheckToPlayFootSound();
