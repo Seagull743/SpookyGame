@@ -570,7 +570,7 @@ MonoBehaviour:
   anim: {fileID: 2141696367}
   player: {fileID: 1924890204688602056}
   DeadScreen: {fileID: 0}
-  ghost: {fileID: 0}
+  ghost: {fileID: 5385035567166698144}
   DeathSound: {fileID: 1071473177}
 --- !u!114 &667557600
 MonoBehaviour:
@@ -791,6 +791,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d893a69a9b2e9794a8f1135ec1f89a8c, type: 3}
+--- !u!1 &5385035567166698144 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5385035566966326522, guid: d893a69a9b2e9794a8f1135ec1f89a8c, type: 3}
+  m_PrefabInstance: {fileID: 336590426}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4751488911855904794 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4751488912192380480, guid: d893a69a9b2e9794a8f1135ec1f89a8c, type: 3}

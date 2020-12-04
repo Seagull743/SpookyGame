@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Chase State
   m_EditorClassIdentifier: 
   actions:
-  - {fileID: 11400000, guid: 3e94395c721d53d45a2edd0f03495131, type: 2}
   - {fileID: 11400000, guid: e70fab2ec916e9b4db437f091d6a3ee1, type: 2}
+  - {fileID: 11400000, guid: 3e94395c721d53d45a2edd0f03495131, type: 2}
   SceneGizmocolor: {r: 1, g: 0, b: 0, a: 1}
   transitions:
   - decision: {fileID: 11400000, guid: 5ef4bdf16a4deca47880cadccf0db787, type: 2}

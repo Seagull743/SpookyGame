@@ -21,13 +21,15 @@ public class AttackAction : Action
 
         Debug.DrawRay(controller.eyes.position, controller.eyes.forward.normalized * controller.enemyStats.AttackRange, Color.red);
 
+        //in the future you can shoot multiple rays from multiple points and check if one of them hits the player, then if one does do the attack stuff.
+
         if (Physics.Raycast(controller.eyes.position, controller.eyes.forward, out hit, controller.enemyStats.AttackRange) && hit.collider.CompareTag("Player"))
         {
             GameObject hitObject = hit.transform.gameObject;
 
             if (hitObject.GetComponent<PlayerDeath>())
             {
-             
+                Debug.Log("killed player");
                 hitObject.GetComponent<PlayerDeath>().playerdeath();
                 
             }

@@ -23,7 +23,6 @@ public class PlayerDeath : MonoBehaviour
     {
         
         Destroy(ghost);
-
         StartCoroutine(DeathAnimWait());
         
        

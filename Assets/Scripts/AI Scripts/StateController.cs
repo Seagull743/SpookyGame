@@ -68,6 +68,10 @@ public class StateController : MonoBehaviour
             Handles.DrawLine(eyePos - transform.forward, eyePos - transform.forward + viewAngleA * enemyStats.lookSphereCastRadius);
             Handles.DrawLine(eyePos - transform.forward, eyePos - transform.forward + viewAngleB * enemyStats.lookSphereCastRadius);
 
+            //Vector3 lookPos = transform.position;
+            //lookPos.y = eyes.transform.position.y;
+            //Gizmos.DrawSphere(lookPos, enemyStats.lookSphereCastRadius);
+
             Handles.color = Color.red;
         }  
     }

@@ -40,11 +40,24 @@ public class LookDecisionV2 : Decision
     //    }
     //}
 
+
+        
+
     public bool Look(StateController controller)
     {
+        //Debug.Log("words");
+
         this.controller = controller;
 
-        Collider[] targetsInViewRadius = Physics.OverlapSphere(controller.transform.position + new Vector3(0, controller.eyes.position.y, 0), controller.enemyStats.lookSphereCastRadius, playerLM);
+
+        Vector3 lookPos = controller.transform.position;
+        lookPos.y = controller.eyes.transform.position.y;
+
+        
+
+
+
+        Collider[] targetsInViewRadius = Physics.OverlapSphere(lookPos, controller.enemyStats.lookSphereCastRadius, playerLM);
 
 
         for (int i = 0; i < targetsInViewRadius.Length; i++)
@@ -52,19 +65,19 @@ public class LookDecisionV2 : Decision
             Transform player = GM.instance.player.transform;
 
             Vector3 dirToTarget = (player.position - (controller.transform.position - controller.transform.forward)).normalized;
+    
 
             RaycastHit hit;
 
             if (Vector3.Angle(controller.transform.forward, dirToTarget) < controller.enemyStats.viewAngle / 2)
             {
-                float dist = Vector3.Distance(controller.transform.position + new Vector3(0, controller.eyes.position.y, 0), player.position);
+                float dist = Vector3.Distance(lookPos, player.position);
 
-                if (!Physics.Raycast((controller.transform.position + new Vector3(0, controller.eyes.position.y, 0)) - controller.transform.forward, dirToTarget, out hit, dist, wallsOnly))
+                if (!Physics.Raycast(lookPos - controller.transform.forward, dirToTarget, out hit, dist, wallsOnly))
                 {
                     Debug.Log("Can see the player");
                     
-                    Debug.DrawLine(controller.transform.position + new Vector3(0, controller.eyes.position.y, 0), hit.point, Color.green);
-
+                    //Debug.DrawLine(lookPos, hit.point, Color.green);
                     
 
                     controller.gameObject.GetComponent<MonsterAudio>().Playchasesound();
@@ -73,7 +86,7 @@ public class LookDecisionV2 : Decision
 
                 else
                 {
-                    Debug.DrawLine(controller.transform.position + new Vector3(0, controller.eyes.position.y, 0), hit.point, Color.blue);
+                    Debug.DrawLine(lookPos, hit.point, Color.blue);
                     controller.gameObject.GetComponent<MonsterAudio>().Stopchasesound();
                     return false;
                     
