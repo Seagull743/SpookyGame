@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< Updated upstream
-guid: 83745baf8829e6e4784ff55c49fc502d
-=======
-guid: 5b0d1d928b85b5544bcc0d190d163145
->>>>>>> Stashed changes
+guid: 99dcaeb399130a741b04b0ede16e3624
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
@@ -67,11 +63,7 @@ ModelImporter:
     secondaryUVMinLightmapResolution: 40
     secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
-<<<<<<< Updated upstream
-    useFileScale: 1
-=======
     useFileScale: 0
->>>>>>> Stashed changes
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
