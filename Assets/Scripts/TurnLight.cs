@@ -73,12 +73,16 @@ public class TurnLight : InteractiveObject
 
     public void BrokenBulbEvent()
     {
-        lighton = false;
-        light.SetActive(false);
-        lightStand.SetActive(false);
-        BrokenBulbSound.Play();
+        if(lighton == true)
+        {
+            lighton = false;
+            light.SetActive(false);
+            lightStand.SetActive(false);
+            BrokenBulbSound.Play();
+        }
+        
+       
     }
-
 
     public void LightSwitchToggle()
     {

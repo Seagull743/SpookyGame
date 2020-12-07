@@ -5,6 +5,7 @@ using UnityEngine;
 public class Key : InteractiveObject
 
 {
+    public AudioSource Pickupsound;
     public LockedDoor ld;
     public GameObject key;
     public LockedDoorSound LDS;
@@ -17,6 +18,7 @@ public class Key : InteractiveObject
     private void GotKey()
     {
         Debug.Log("got Key");
+        Pickupsound.Play();
         LDS.GetComponent<LockedDoorSound>().enabled = false;
         ld.UnlockDoor();
         Destroy(key);

@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameOverTrigger : MonoBehaviour
 {
     public GM gm;
     public GameObject player;
-
+   
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -24,7 +25,7 @@ public class GameOverTrigger : MonoBehaviour
         yield return new WaitForSeconds(2);
         gm.Youwin();
         yield return new WaitForSeconds(2);
-        //Load main menu
+        SceneManager.LoadScene("StartScreen");
     }
 }
 
