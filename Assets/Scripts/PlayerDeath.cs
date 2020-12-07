@@ -10,6 +10,7 @@ public class PlayerDeath : MonoBehaviour
     public GameObject DeadScreen;
     public GameObject ghost;
     public AudioSource DeathSound;
+    public StateController SC;
     
     // Start is called before the first frame update
     void Start()
@@ -21,8 +22,8 @@ public class PlayerDeath : MonoBehaviour
 
     public void playerdeath()
     {
-        
-        Destroy(ghost);
+        SC.GetComponent<StateController>().enabled = false;
+        ghost.SetActive(false);
         StartCoroutine(DeathAnimWait());
         
        

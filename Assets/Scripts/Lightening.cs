@@ -8,31 +8,38 @@ public class Lightening : MonoBehaviour
     private float timer2;
     public Light DirectionalLight;
     private bool reset = false;
+    public AudioSource thunder;
+    
     void Awake()
     {
         DirectionalLight.enabled = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        timer += Time.deltaTime;
-        if(timer > Random.Range(10, 20))
-        {
-            DirectionalLight.enabled = true;
-            timer = 0;
-            reset = true;
-        }
-
-        if(reset == true)
-        {
-            timer2 += Time.deltaTime;
-            if(timer2 > 0.2)
-            {
-                DirectionalLight.enabled = false;
-                timer2 = 0;
-                reset = false;
-            }
-        }
+        StartCoroutine(lightningflash());
     }
+
+
+
+    // Update is called once per frame
+
+
+    IEnumerator lightningflash()
+    {
+        yield return new WaitForSeconds(23);
+        DirectionalLight.enabled = true;
+        yield return new WaitForSeconds(0.3f);
+        DirectionalLight.enabled = false;
+        yield return new WaitForSeconds(0.3f);
+        DirectionalLight.enabled = true;
+        thunder.Play();
+        yield return new WaitForSeconds(0.5f);
+        DirectionalLight.enabled = false;
+        yield return new WaitForSeconds(Random.Range(60, 80));
+        yield return StartCoroutine(lightningflash());
+    }
+
+
 }
+

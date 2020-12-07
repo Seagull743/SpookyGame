@@ -11,7 +11,6 @@ public class GM : MonoBehaviour
     [SerializeField] private GameObject normalcross;
     public GameObject player;
     public GameObject InstructionText;
-
     public GameObject YouWinScreen;
 
 
@@ -31,6 +30,9 @@ public class GM : MonoBehaviour
     }
 
     
+
+
+
 
     void Start()
     {
@@ -65,6 +67,7 @@ public class GM : MonoBehaviour
         yield return new WaitForSeconds(3);
         //Load the main menu scene
     }
+
 
     public void Normalcross()
     {
