@@ -14,11 +14,14 @@ public class TurnLight : InteractiveObject
     public AudioSource lightsound;
     public AudioSource BrokenBulbSound;
     public GameObject lightswitchpivot;
-
+    public GameObject LightBulbOn;
+    public bool LightBulbbreak;
+    
     void Start()
     {
         Lightduration = maxlight;
         light.SetActive(false);
+        LightBulbOn.SetActive(false);
     }
 
     public override void PlayerInteraction()
@@ -79,6 +82,9 @@ public class TurnLight : InteractiveObject
             light.SetActive(false);
             lightStand.SetActive(false);
             BrokenBulbSound.Play();
+            LightBulbOn.SetActive(false);
+            LightBulbbreak = true;
+            
         }
         
        
@@ -100,19 +106,45 @@ public class TurnLight : InteractiveObject
 
     public void LightOn()
     {
-
-        light.SetActive(true);
-        lighton = true;
-        lightsound.Play();
-        lightswitchpivot.transform.Rotate(-180.0f, 0.0f, 0.0f);
+        if(LightBulbbreak == true)
+        {
+            light.SetActive(false);
+            LightBulbOn.SetActive(false);
+            lighton = true;
+            lightsound.Play();
+            lightswitchpivot.transform.Rotate(-180.0f, 0.0f, 0.0f);
+        }
+        else
+        {
+           light.SetActive(true);
+           LightBulbOn.SetActive(true);
+           lighton = true;
+           lightsound.Play();
+           lightswitchpivot.transform.Rotate(-180.0f, 0.0f, 0.0f);
+        }
+        
+      
     }
 
     public void LightOff()
     {
-        light.SetActive(false);
-        lighton = false;
-        lightsound.Play();
-        lightswitchpivot.transform.Rotate(180.0f, 0.0f, 0.0f);
+        if(LightBulbbreak == true)
+        {
+            light.SetActive(false);
+            LightBulbOn.SetActive(false);
+            lighton = false;
+            lightsound.Play();
+            lightswitchpivot.transform.Rotate(180.0f, 0.0f, 0.0f);
+        }
+        else
+        {
+            light.SetActive(false);
+            LightBulbOn.SetActive(false);
+            lighton = false;
+            lightsound.Play();
+            lightswitchpivot.transform.Rotate(180.0f, 0.0f, 0.0f);
+        }
+      
     }
 
 }              

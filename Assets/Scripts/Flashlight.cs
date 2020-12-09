@@ -13,14 +13,14 @@ public class Flashlight : MonoBehaviour
     public float lightDrain = 0.1f;
     public float maxBatteryLife = 99.0f;
     public float miniumBatteryLife = 80.5f;
-    public GameObject battext;
+   
 
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(Flashtime());
         BatteryLife = maxBatteryLife;
-        battext.SetActive(false);
+       
     }
 
     // Update is called once per frame
@@ -92,19 +92,14 @@ public class Flashlight : MonoBehaviour
         lighton = false;
     }
 
-    IEnumerator Flashlighttext()
-    {
-        battext.SetActive(true);
-        yield return new WaitForSeconds(2);
-        battext.SetActive(false);
-    }
+   
     
 
     IEnumerator Flashtime()
     {
         yield return new WaitForSeconds(Random.Range(35, 40));
         light.enabled = false;
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1);
         light.enabled = true;
         yield return new WaitForSeconds(0.3f);
         light.enabled = false;

@@ -24,21 +24,15 @@ public class PlayerDeath : MonoBehaviour
     {
         SC.GetComponent<StateController>().enabled = false;
         ghost.SetActive(false);
-        StartCoroutine(DeathAnimWait());
-        
-       
-    }
-IEnumerator DeathAnimWait()
-    {
-        yield return new WaitForSeconds(1);
         anim.SetBool("death", true);
         DeathSound.Play();
         StartCoroutine(Deathscreenwaittime());
     }
 
+
  IEnumerator Deathscreenwaittime()
     {  
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
         DeadScreen.SetActive(true);
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class CrossTurn : MonoBehaviour
 {
     public Animator anim;
-
+    public AudioSource crossturn;
    
     
     // Start is called before the first frame update
@@ -17,6 +17,7 @@ public class CrossTurn : MonoBehaviour
     public void TurnCross()
     {
         anim.SetBool("Turn", true);
+        crossturn.Play();
     }
 
     

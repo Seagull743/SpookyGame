@@ -9,6 +9,7 @@ public class Key : InteractiveObject
     public LockedDoor ld;
     public GameObject key;
     public LockedDoorSound LDS;
+    public GM gm;
     public override void PlayerInteraction() 
     {
         GotKey();
@@ -21,6 +22,7 @@ public class Key : InteractiveObject
         Pickupsound.Play();
         LDS.GetComponent<LockedDoorSound>().enabled = false;
         ld.UnlockDoor();
+        gm.Normalcross();
         Destroy(key);
     }
 

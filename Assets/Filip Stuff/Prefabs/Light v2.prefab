@@ -1,5 +1,100 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &252064725
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 252064726}
+  - component: {fileID: 252064729}
+  - component: {fileID: 252064728}
+  - component: {fileID: 252064727}
+  m_Layer: 11
+  m_Name: LightBulbOn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &252064726
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252064725}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 51.16, y: 27.67, z: -108.39}
+  m_LocalScale: {x: 1.957041, y: 1.957041, z: 1.957041}
+  m_Children: []
+  m_Father: {fileID: 3432143959726686928}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &252064729
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252064725}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &252064728
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252064725}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: e5826e09e6067374589c67655bc10ab5, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!135 &252064727
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252064725}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &79288399738050563
 GameObject:
   m_ObjectHideFlags: 0
@@ -9,7 +104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2412692268911616656}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: transform145
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +134,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 273038228629623217}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: polySurface103
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +165,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1116864752522881421}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: transform142
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +197,7 @@ GameObject:
   - component: {fileID: 9133481272409210586}
   - component: {fileID: 1909050319456210307}
   - component: {fileID: 7108018882762597182}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: polySurface102
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,7 +276,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3343066211705372317}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: polySurface96
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,7 +309,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4276733648253399568}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: polySurface98
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -247,7 +342,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4852142575268402530}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: polySurface96 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -280,7 +375,7 @@ GameObject:
   - component: {fileID: 7861173990811383742}
   - component: {fileID: 5361732421735019368}
   - component: {fileID: 2420126475673107065}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: polySurface100
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -295,8 +390,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3027336899697756968}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0, y: 4.6398, z: 0}
+  m_LocalScale: {x: 1, y: 0.8310704, z: 1}
   m_Children: []
   m_Father: {fileID: 4276733648253399568}
   m_RootOrder: 1
@@ -359,7 +454,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4146538069280561480}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: polySurface99 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -390,7 +485,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5978810519057969317}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: polySurface99
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -424,7 +519,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8800602124516589700}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: transform149
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -454,7 +549,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5273599551910722228}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: transform151
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -484,7 +579,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3521677723948276074}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: transform144
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -514,7 +609,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4694848563911225831}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: polySurface95
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -545,7 +640,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9161914174977793170}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: transform147
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -575,7 +670,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3791280639180848615}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: transform150
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -607,7 +702,7 @@ GameObject:
   - component: {fileID: 3432143959726686928}
   - component: {fileID: 4787874030013074915}
   - component: {fileID: 1940038951612204386}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: polySurface101
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -624,7 +719,8 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -51.099876, y: -28.553837, z: 108.43158}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 252064726}
   m_Father: {fileID: 5978810519057969317}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -686,7 +782,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3267558678787435582}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: transform143
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -716,7 +812,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4726818657994023549}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: polySurface97
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -747,7 +843,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 844659520102904464}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: polySurface102 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -778,7 +874,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7615985197389132060}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: polySurface92
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -812,7 +908,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5631085845976985727}
   - component: {fileID: 4320449931936255460}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Light v2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -861,7 +957,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7566758543055080410}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: transform146
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -891,7 +987,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1968913356862661348}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: transform148
   m_TagString: Untagged
   m_Icon: {fileID: 0}

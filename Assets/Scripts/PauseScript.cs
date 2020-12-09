@@ -25,15 +25,19 @@ public class PauseScript : MonoBehaviour
             
             if (!isPaused)
             {
-                Time.timeScale = 0f;
+                Time.timeScale = 0.1f;
                 isPaused = true;
                 pauseCanvas.SetActive(true);
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
             }
             else
             {
                 Time.timeScale = 1;
                 isPaused = false;
                 pauseCanvas.SetActive(false);
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
             }
 
         }

@@ -12,6 +12,7 @@ public class GM : MonoBehaviour
     public GameObject player;
     public GameObject InstructionText;
     public GameObject YouWinScreen;
+    public GameObject obejectiveText;
 
 
 
@@ -38,6 +39,15 @@ public class GM : MonoBehaviour
     {
         StartCoroutine(TextSeconds());
         YouWinScreen.SetActive(false);
+        StartCoroutine(textObj());
+    }
+
+    IEnumerator textObj()
+    {
+        yield return new WaitForSeconds(1);
+        obejectiveText.SetActive(true);
+        yield return new WaitForSeconds(6);
+        obejectiveText.SetActive(false);
     }
 
 
